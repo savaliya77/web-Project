@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   
+       
+    {% load static %}
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>F.r.i.e.n.d.s - Finder</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/core-img/favicon.ico">
+
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="{% static "assets/css/example.css" %}">
+    <link href="{% static "assets/css/style.css" %}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static "assets/css/bootstrap/bootstrap.min.css" %}">
+
+    <!-- Responsive CSS -->
+    <link href="{% static "assets/css/responsive.css" %}" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header class="header_area" id="header">
+        <div class="container-fluid h-100">
+            <div class="row h-100">
+                <div class="col-12 h-100">
+                    <nav class="h-100 navbar navbar-expand-lg">
+                        <a class="navbar-brand" href="/"><img src="{% static "assets/images/Friends_logo.png" %}" style="width: 40%; height: 20% ;display: hidden;"/></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#dorneNav" aria-controls="dorneNav" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
+                        <!-- Nav -->
+                        <div class="collapse navbar-collapse" id="dorneNav">
+                            <ul class="navbar-nav mr-auto" id="dorneMenu">
+                                
+                               
+                            </ul>  
+                            
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- ***** Catagory Area Start ***** -->
+    <section class="dorne-catagory-area" >
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="all-catagories">
+                        <div class="row">
+                            <!-- Single Catagory Area -->
+                                
+                                
+                            {% for key, value in dialogue.items %}
+                                <div class="col-12 col-sm-6 col-md">
+                                    <div class="single-catagory-area wow fadeInUpBig" data-wow-delay="0.2s">
+                                        <div class="catagory-content">
+                                            <a>
+                                                {{ key}} {% for val in value %}{{val}}<br/><br/>{% endfor %}
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br/><br/>
+                            {% endfor %}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br/><br/>
+    </section>
+    <!-- ***** Catagory Area End ***** -->
+
+
+    <!-- jQuery-2.2.4 js -->
+    <script src="{% static "assets/js/jquery/jquery-2.2.4.min.js" %}"></script>
+    <!-- Popper js -->
+    <script src="{% static "assets/js/bootstrap/popper.min.js" %}"></script>
+    <!-- Bootstrap-4 js -->
+    <script src="{% static "assets/js/bootstrap/bootstrap.min.js" %}"></script>
+    <!-- All Plugins js -->
+    <script src="{% static "assets/js/others/plugins.js" %}"></script>
+    <!-- Active JS -->
+    <script src="{% static "assets/js/active.js" %}"></script>
+</body>
+
+</html>
