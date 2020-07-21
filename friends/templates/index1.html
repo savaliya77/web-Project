@@ -231,6 +231,22 @@
           </ul>
         </nav>
 		<div class="row mb-5">
+            {% if not dialogue.items %}
+                <div class="flip-card" style=" background-color: darkgrey ;margin-left: 400px;">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+					<img src="{% static "assets/images/image.jpg" %}" class="card-img-top" alt="..." style="width: 270px ; height:170px;">
+                       <h5 class="card-title" style="font-family: cursive ; color: burlywood">No result Found.</h5>
+                            <h5  class="card-title" style="font-family: cursive ; color: burlywood;">Please Try Better Dialogue </h5>
+                           
+                            </div>
+                       
+                        
+					
+                </div>
+            </div>
+            {% endif %}
+            
 			{% for key, value in dialogue.items %}
         
 			<div class="col-md-4" style="padding: 20px">
